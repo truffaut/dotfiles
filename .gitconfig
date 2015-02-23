@@ -1,0 +1,8 @@
+[user]
+	name = Michael Ornellas
+	email = mornellas@anyperk.com
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
