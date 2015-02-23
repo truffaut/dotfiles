@@ -45,7 +45,7 @@ ZSH_THEME="nanotech"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git bundler)
 
 # User configuration
 
@@ -78,6 +78,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+unsetopt correct_all
+unsetopt correct
+unsetopt nomatch
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH=$PATH:$HOME/bin
 source $HOME/.aliases
