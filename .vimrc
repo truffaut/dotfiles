@@ -11,3 +11,8 @@ set shiftwidth=2
 set number
 set nobackup
 set showmatch
+set ttyfast
+set mouse=a
+set ttymouse=xterm2
+execute pathogen#infect()
+call pathogen#helptags()

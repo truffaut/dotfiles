@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/michaelornellas/.oh-my-zsh
+export ZSH=/Users/mike/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -78,10 +78,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-DEFAULT_USER=michaelornellas
+DEFAULT_USER=mike
 unsetopt correct_all
 unsetopt correct
 unsetopt nomatch
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.vimpkg/bin
 source $HOME/.aliases
