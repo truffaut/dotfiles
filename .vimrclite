@@ -1,0 +1,69 @@
+"turn off vi compatibility
+set nocompatible
+
+"turn on syntax highlighting
+syntax on
+filetype plugin indent on
+
+set backspace=indent,eol,start
+
+set smarttab
+set autoindent
+set smartindent
+set tabstop=2
+set expandtab
+set shiftwidth=2
+
+set number
+set nobackup
+
+set showmatch
+
+set ttyfast
+
+let mapleader = ","
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
+
+set showcmd       " display incomplete commands
+set incsearch     " do incremental searching
+set laststatus=2  " Always display the status line
+set autowrite     " Automatically :write before running commands
+
+set list listchars=tab:»·,trail:·,nbsp:·
+set nojoinspaces
+
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
+" Run commands that require an interactive shell
+nnoremap <Leader>r :RunInInteractiveShell<space>
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+" Always use vertical diffs
+set diffopt+=vertical
+
